@@ -127,6 +127,8 @@
                 }
                 &:hover {
                     filter: brightness(0.9);
+                    transform: translateY(-3px);
+                    transition: $btn-transition;
                 }
                 .icon {
                     margin-right: 4px;
