@@ -1,0 +1,111 @@
+// =====================================================================================================================
+// LOCAL MIXINS (FOR THIS PROJECT) ===================================================================================
+// =====================================================================================================================
+@mixin btn($color, $background) {
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  color: $color;
+  background: $background;
+  display: inline-flex;
+  align-items: center;
+  @content;
+}
+@mixin btn-hover($color, $colorMode, $percentage) {
+  @if $colorMode == darken {
+    &:hover {
+      transform: translateY(-3px);
+      transition: $btn-transition;
+      background-color: darken($color, $percentage);
+      box-shadow: 0 3px 3px 1px rgba(255, 255, 255, 0.15);
+    }
+    &:active {
+      transition: $btn-transition;
+      transform: translateY(3px) scale(95%);
+    }
+  }
+  @if $colorMode == lighten {
+    &:hover {
+      transform: translateY(-3px);
+      transition: $btn-transition;
+      background-color: lighten($color, $percentage);
+      box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.15);
+    }
+    &:active {
+      transition: $btn-transition;
+      transform: translateY(3px) scale(95%);
+    }
+  }
+}
+@mixin btn-hover-animation {
+  &:hover {
+    transform: scale(1.05);
+  }
+  transition: all 0.2s;
+}
+// =====================================================================================================================
+// GLOBAL MIXINS (FOR ALL PROJECTS) ====================================================================================
+// =====================================================================================================================
+
+@mixin media($breakpoint) {
+  @if $breakpoint==desktopLarge {
+    @media only screen and (min-width: 1681px) {
+      @content;
+    }
+  }
+  @if $breakpoint==desktop {
+    @media only screen and (min-width: 1367px) and (max-width: 1680px) {
+      @content;
+    }
+  }
+  @if $breakpoint==desktopSmall {
+    @media only screen and (min-width: 1024px) and (max-width: 1366px) {
+      @content;
+    }
+  }
+  @if $breakpoint==tabletLarge {
+    @media only screen and (min-width: 769px) and (max-width: 1023px) {
+      @content;
+    }
+  }
+  @if $breakpoint==tablet {
+    @media only screen and (min-width: 481px) and (max-width: 768px) {
+      @content;
+    }
+  }
+  @if $breakpoint==mobileLarge {
+    @media only screen and (min-width: 426px) and (max-width: 480px) {
+      @content;
+    }
+  }
+  @if $breakpoint==mobile {
+    @media only screen and (min-width: 376px) and (max-width: 425px) {
+      @content;
+    }
+  }
+  @if $breakpoint==mobileSmall {
+    @media only screen and (max-width: 375px) {
+      @content;
+    }
+  }
+}
+@mixin customMedia($minwidth, $maxwidth) {
+  @if $minwidth and $maxwidth {
+    @media only screen and (min-width: $minwidth) and (max-width: $maxwidth) {
+      @content;
+    }
+  }
+  @if $minwidth==false and $maxwidth {
+    @media only screen and (max-width: $maxwidth) {
+      @content;
+    }
+  }
+  @if $minwidth and $maxwidth==false {
+    @media only screen and (min-width: $minwidth) {
+      @content;
+    }
+  }
+}

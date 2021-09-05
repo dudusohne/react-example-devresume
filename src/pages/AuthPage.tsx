@@ -1,15 +1,16 @@
 
 
+import styles from '../styles/authpage.module.scss';
 
-
-export function AuthPage(){
+export function AuthPage() {
 
 
 
 
     return (
         <>
-        <h1>auth page</h1>
+            <div className={styles.container}>
+            </div>
         </>
     )
 }

@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+@import 'variables';
+@import 'mixins';
+@import 'animations';
+@import 'typography';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button,
+input[type='number'] {
+  -webkit-appearance: none;
+  margin: 0;
+  -moz-appearance: textfield;
+}
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right bottom, $gray1, darken($gray1, 40%));
+}
+*::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(to right bottom, darken($gray1, 30%), darken($gray1, 60%));
+}
+*::-webkit-scrollbar-track {
+  background: #000;
+}
+
+.u-display-block {
+  display: block;
+}
+.u-bold {
+  font-weight: bold;
+}
