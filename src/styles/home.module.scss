@@ -1,6 +1,55 @@
-.container {
+@import "../global/global.scss";
 
-    .loginContainer{
-        
+.container {
+    display: grid;
+    grid-template-columns: 3fr 2fr 2fr 1fr;
+    grid-template-rows: 2fr 2fr 0.5fr;
+    height: 100vh;
+    background-image: linear-gradient($black2, $black1);
+
+    .contentOne {
+        grid-row: 1/4;
+        width: 100%;
+        height: 100%;
+        .div1 {
+            height: 50%;
+            grid-row: 1/2;
+            span.welcomeTitle {
+               font-family: 'Roboto', sans-serif;
+               font-size: 3rem;
+               color: #fff;
+               font-weight: 700;
+            }
+        }
+        .div2 {
+            height: 50%;
+            grid-row: 2/2;
+        }
+    }
+    .contentTwo {
+        grid-row: 1/4;
+        width: 100%;
+        height: 100%;
+        .div1 {
+            height: 50%;
+            grid-row: 1/2;
+        }
+        .div2 {
+            height: 50%;
+            grid-row: 2/2;
+        }
+    }
+    .contentThree {
+        grid-row: 1 /4;
+        width: 100%;
+        height: 100%;
+        .div1 {
+            height: 50%;
+            grid-row: 1/2;
+        }
+        .div2 {
+            height: 50%;
+            grid-row: 2/2;
+        }
     }
 }

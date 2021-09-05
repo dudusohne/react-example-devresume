@@ -11,7 +11,7 @@ function App() {
     <BrowserRouter>
       <AuthContextProvider>
         <Route path="/" exact component={AuthPage} />
-        <Route path="/home" component={Home} />
+        <Route path="/home" exact component={Home} />
       </AuthContextProvider>
     </BrowserRouter>
   );
