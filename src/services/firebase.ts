@@ -20,6 +20,7 @@ const database = firebase.database();
 
 export { firebase, auth, database }
 
+export {};
 
 
 
@@ -44,11 +45,3 @@ export { firebase, auth, database }
 
 
 
-
-
-
-
-
-const firebaseConfig = {
-
-  };
