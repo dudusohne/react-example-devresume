@@ -14,7 +14,7 @@ export function AuthPage() {
             await signInWithGoogle();
             history.push('/home');
         } catch (e) {
-            console.log('não foi possível autenticar')
+            console.log(e,'não foi possível autenticar')
         }
     }
 
@@ -22,7 +22,7 @@ export function AuthPage() {
         <div className={styles.container}>
             <div className={styles.containerLogin}>
                 <span className={styles.title}>Para acessar o meu portifólio</span>
-                <button onClick={() => handleGoogleAuth} className={styles.googleButton}>
+                <button onClick={handleGoogleAuth} className={styles.googleButton}>
                     <FaGoogle className={styles.icon} />
                     Faça login com o google
                 </button>
