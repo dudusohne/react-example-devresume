@@ -1,4 +1,5 @@
-# Olá! Construí esse app com intuíto de apresentar meu portifólio profissional
+# Olá, bem vindo! 
+## Construí esse app com intuíto de apresentar meu portifólio profissional
 
 ## Ferramentas usadas:
 [![Skills](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://img.shields.io/badge/)
