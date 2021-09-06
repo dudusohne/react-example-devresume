@@ -1,6 +1,6 @@
 
 
-
+import photo from '../assets/ed.png';
 import styles from '../styles/home.module.scss';
 
 export function Home() {
@@ -15,8 +15,7 @@ export function Home() {
                     </span>
                 </div>
                 <div className={styles.div2}>
-                    <span>hello word</span>
-
+                    <img src={photo} alt="me" />
                 </div>
             </div>
             <div className={styles.contentTwo}>

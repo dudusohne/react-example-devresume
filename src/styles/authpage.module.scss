@@ -39,6 +39,11 @@
             border-radius: 50%;
             border: 2px solid rgb(255, 117, 117);
             margin-bottom: 2%;
+            &:hover {
+                transform: scale(1.18);
+                transition: all 0.8s;
+                cursor: crosshair;
+              }
         }
 
         .footer {
