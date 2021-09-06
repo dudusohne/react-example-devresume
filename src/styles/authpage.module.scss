@@ -43,7 +43,7 @@
                 transform: scale(1.18);
                 transition: all 0.8s;
                 cursor: crosshair;
-              }
+            }
         }
 
         .footer {
@@ -58,23 +58,30 @@
                 .icon {
                     width: 3rem;
                     height: 3rem;
-                    color: rgb(8, 8, 8);
+                    color: rgb(53, 53, 53);
+
+                    transition: $btn-transition;
+                    transform: rotate(-45deg);
+                    transform-origin: 50%;
                     &:hover {
-                        transform: translateY(-3px);
-                        transition: $btn-transition;
+                        transform: rotate(45deg);
+                        transform-origin: 50%;
                         color: rgb(255, 35, 72);
-                      }
+                    }
                 }
                 .icon2 {
+                    margin-left: 0.4rem;
                     width: 3.3rem;
                     height: 3.3rem;
-                    color: rgb(8, 8, 8);
-
+                    color: rgb(53, 53, 53);
+                    transition: $btn-transition;
+                    transform: rotate(-45deg);
+                    transform-origin: 50%;
                     &:hover {
-                        transform: translateY(-3px);
-                        transition: $btn-transition;
+                        transform: rotate(45deg);
+                        transform-origin: 50%;
                         color: rgb(255, 35, 72);
-                      }
+                    }
                 }
             }
         }
