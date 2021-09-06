@@ -8,6 +8,10 @@
 [![Skills](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://img.shields.io/badge/)
 [![Skills](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)](https://img.shields.io/badge/)
 
+## Nele contém diversos exemplos que pode se usar no dia-a-dia, como context api e autenticação pelo google com firebase.
+## Exemplos de animações com sass e tipagem de todo projeto com Typescript. 
+
+
 
 In the project directory, you can run:
 
