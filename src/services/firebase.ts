@@ -20,7 +20,6 @@ const database = firebase.database();
 
 export { firebase, auth, database }
 
-export {};
 
 
 
