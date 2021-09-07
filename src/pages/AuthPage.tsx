@@ -7,7 +7,6 @@ import { VscGithub } from 'react-icons/vsc';
 import { AiOutlineLinkedin } from 'react-icons/ai';
 import styles from '../styles/authpage.module.scss';
 import photo from '../assets/ed.png';
-import { Svg1 } from '../components/Svg1';
 
 export function AuthPage() {
     const { signInWithGoogle } = useAuth();
