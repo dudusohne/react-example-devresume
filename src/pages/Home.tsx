@@ -8,22 +8,27 @@ import { FaSass } from 'react-icons/fa';
 
 const skills = [
     {
+        id: 1,
         sname: 'javascript',
         sicon: <SiJavascript />
     },
     {
+        id: 2,
         sname: 'react',
-        sicon: <FaReact />
+        sicon: <SiJavascript />
     },
     {
+        id: 3,
         sname: 'sass',
         sicon: <FaSass />
     },
     {
+        id: 4,
         sname: 'typescript',
         sicon: <SiTypescript />
     },
     {
+        id: 5,
         sname: 'node',
         sicon: <SiNodeDotJs />
     },
@@ -50,7 +55,8 @@ export function Home() {
                         {skills.map((skill: any) => {
                             return (
                                 <div className={styles.listContentTwo}>
-                                    <span className={styles.listContentTwoSkill}>{skill.key}{skill.sname}</span>
+                                    {skill.key}{skill.id}
+                                    <span className={styles.listContentTwoSkill}>{skill.sname}</span>
                                     <span className={styles.listContentTwoSkillIcon}>{skill.sicon}</span>
                                 </div>
                             )
