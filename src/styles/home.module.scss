@@ -137,13 +137,13 @@
         }
     }
     .contentThree {
-        grid-row: 1 /4;
+        grid-row: 1/4;
         width: 100%;
         height: 100%;
         .div1 {
             height: 50%;
             grid-row: 1/2;
-            .boxContentTwo {
+            .boxContentThree {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -169,14 +169,13 @@
                     margin-left: 3%;
                     font-weight: 800;
                 }
-                .listContentTwo {
+                .listContentThree {
                     margin-bottom: 5px;
                     display: flex;
                     background-color: #000;
                     width: 94%;
                     align-items: center;
                     justify-content: flex-end;
-                    // border-top-right-radius: 12px;
                     border-bottom-right-radius: 12px;
                     @include btn-hover-animation;
 

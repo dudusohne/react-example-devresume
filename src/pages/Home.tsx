@@ -100,11 +100,11 @@ export function Home() {
             <div className={styles.contentThree}>
                 <div className={styles.div1}>
                     <Modal onClose={() => setShowJobsModal(false)} show={showJobsModal}>
-                        <div className={styles.boxContentTwo}>
+                        <div className={styles.boxContentThree}>
                             <span className={styles.div2title}>skills</span>
                             {skills.map((skill: any) => {
                                 return (
-                                    <div className={styles.listContentTwo}>
+                                    <div className={styles.listContentThree}>
                                         <span className={styles.listContentTwoSkill}>{skill.sname}</span>
                                         <span className={styles.listContentTwoSkillIcon}>{skill.sicon}</span>
                                     </div>
