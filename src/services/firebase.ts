@@ -2,11 +2,14 @@ import firebase from 'firebase/app'
 
 import 'firebase/auth';
 import 'firebase/database';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBRImEGtmuJk4QbCM3ZqZp-uL8NHM1gSaw",
-    authDomain: "react-example-devresume.firebaseapp.com",
-    databaseURL: "https://react-example-devresume-default-rtdb.firebaseio.com",
+    apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+    authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+    databaseURL: process.env.REACT_APP_FIREBASE_DATABASE_URL,
     projectId: "react-example-devresume",
     storageBucket: "react-example-devresume.appspot.com",
     messagingSenderId: "140880074215",
