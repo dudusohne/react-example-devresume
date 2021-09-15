@@ -1,12 +1,12 @@
-import photo from '../assets/ed.png';
-import styles from '../styles/home.module.scss';
+import { useState } from 'react';
+import { Modal } from '../components/Modal';
 import { FaReact, FaSass, FaUserTie, FaDatabase } from 'react-icons/fa';
 import { SiNodeDotJs, SiHtml5, SiFirebase, SiTypescript, SiJavascript } from 'react-icons/si';
-
 import { IoSchoolSharp } from 'react-icons/io5';
 import { GiFist } from 'react-icons/gi';
-import { Modal } from '../components/Modal';
-import { useState } from 'react';
+
+import photo from '../assets/ed.png';
+import styles from '../styles/home.module.scss';
 
 const skills = [
     {
@@ -101,15 +101,8 @@ export function Home() {
                 <div className={styles.div1}>
                     <Modal onClose={() => setShowJobsModal(false)} show={showJobsModal}>
                         <div className={styles.boxContentThree}>
-                            <span className={styles.div2title}>skills</span>
-                            {skills.map((skill: any) => {
-                                return (
-                                    <div className={styles.listContentThree}>
-                                        <span className={styles.listContentTwoSkill}>{skill.sname}</span>
-                                        <span className={styles.listContentTwoSkillIcon}>{skill.sicon}</span>
-                                    </div>
-                                )
-                            })}
+                           <span>job title</span>
+                           <span>job description</span>
                         </div>
                     </Modal>
 
