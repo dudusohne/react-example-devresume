@@ -109,7 +109,6 @@ export function Home() {
                 </div>
                 <div className={styles.div2}>
                     <span>hello word</span>
-
                 </div>
             </div>
         </div>
