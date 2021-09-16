@@ -99,16 +99,16 @@ export function Home() {
             </div>
             <div className={styles.contentThree}>
                 <div className={styles.div1}>
-                    {/* <Modal onClose={() => setShowJobsModal(false)} show={showJobsModal}>
-                        <div className={styles.boxContentThree}>
-                           <span>job title</span>
-                           <span>job description</span>
-                        </div>
-                    </Modal> */}
-                    <span>hello word</span>
+                    <div className={styles.contentThree_div1_box}>
+                        <span>hello word</span>
+
+                    </div>
                 </div>
                 <div className={styles.div2}>
-                    <span>hello word</span>
+                    <div className={styles.contentThree_div2_box}>
+                        <span>hello word</span>
+
+                    </div>
                 </div>
             </div>
         </div>
