@@ -7,6 +7,8 @@ import { GiFist } from 'react-icons/gi';
 
 import photo from '../assets/ed.png';
 import styles from '../styles/home.module.scss';
+import casaImg from '../assets/images/casa-mobile.png';
+import casaImg2 from '../assets/images/casa-responsive.png';
 
 const skills = [
     {
@@ -100,13 +102,25 @@ export function Home() {
             <div className={styles.contentThree}>
                 <div className={styles.div1}>
                     <div className={styles.contentThree_div1_box}>
-                        <span>hello word</span>
-
+                        <img src={casaImg} alt="projeto-casa-libre" />
                     </div>
                 </div>
                 <div className={styles.div2}>
                     <div className={styles.contentThree_div2_box}>
-                        <span>hello word</span>
+
+
+                    </div>
+                </div>
+            </div>
+            <div className={styles.contentFour}>
+                <div className={styles.div1}>
+                    <div className={styles.contentFour_div1_box}>
+                        <img src={casaImg2} alt="projeto-casa-libre" />
+                    </div>
+                </div>
+                <div className={styles.div2}>
+                    <div className={styles.contentFour_div2_box}>
+
 
                     </div>
                 </div>
