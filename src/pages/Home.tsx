@@ -9,6 +9,8 @@ import photo from '../assets/ed.png';
 import styles from '../styles/home.module.scss';
 import casaImg from '../assets/images/casa-mobile.png';
 import casaImg2 from '../assets/images/casa-responsive.png';
+import { ProjectCard } from '../components/ProjectCard';
+import { BackgroundSVG } from '../components/BackgroundSVG';
 
 const skills = [
     {
@@ -68,16 +70,14 @@ export function Home() {
             <div className={styles.contentOne}>
                 <div className={styles.div1}>
                     <div className={styles.buttonsContainer}>
-                        <button><IoSchoolSharp size={30} /></button>
-                        <button onClick={() => setShowJobsModal(true)}><FaUserTie size={30} /></button>
-                        <button onClick={() => setShowSkillsModal(true)}><GiFist size={30} /></button>
+                        <button className={styles.buttonCategories}><IoSchoolSharp size={30} /></button>
+                        <button className={styles.buttonCategories} onClick={() => setShowJobsModal(true)}><FaUserTie size={30} /></button>
+                        <button className={styles.buttonCategories} onClick={() => setShowSkillsModal(true)}><GiFist size={30} /></button>
                     </div>
                     <span className={styles.welcomeTitle}>Eduardo Sohne</span>
                     <span className={styles.welcomeTitle2}>Software Engineer</span>
                     <img src={photo} alt="me" />
-
                 </div>
-
             </div>
             <div className={styles.contentTwo}>
                 <div className={styles.div1}>
@@ -94,35 +94,40 @@ export function Home() {
                             })}
                         </div>
                     </Modal>
-
                 </div>
                 <div className={styles.div2}>
                 </div>
             </div>
             <div className={styles.contentThree}>
                 <div className={styles.div1}>
-                    <div className={styles.contentThree_div1_box}>
-                        <img src={casaImg} alt="projeto-casa-libre" />
-                    </div>
+                    <ProjectCard
+                        imgBanner={casaImg2}
+                        name="CASA LIBRE"
+                        desc="Controle de comandas, fechamento de caixa e controle de estoque"
+                    />
                 </div>
                 <div className={styles.div2}>
-                    <div className={styles.contentThree_div2_box}>
-
-
-                    </div>
+                    <ProjectCard
+                        imgBanner={casaImg2}
+                        name="CASA LIBRE"
+                        desc="Controle de comandas, fechamento de caixa e controle de estoque"
+                    />
                 </div>
             </div>
             <div className={styles.contentFour}>
                 <div className={styles.div1}>
-                    <div className={styles.contentFour_div1_box}>
-                        <img src={casaImg2} alt="projeto-casa-libre" />
-                    </div>
+                    <ProjectCard
+                        imgBanner={casaImg2}
+                        name="CASA LIBRE"
+                        desc="Controle de comandas, fechamento de caixa e controle de estoque"
+                    />
                 </div>
                 <div className={styles.div2}>
-                    <div className={styles.contentFour_div2_box}>
-
-
-                    </div>
+                    <ProjectCard
+                        imgBanner={casaImg2}
+                        name="CASA LIBRE"
+                        desc="Controle de comandas, fechamento de caixa e controle de estoque"
+                    />
                 </div>
             </div>
         </div>

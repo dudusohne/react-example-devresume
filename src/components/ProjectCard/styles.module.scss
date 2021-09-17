@@ -1,0 +1,87 @@
+@import '../../global/global.scss';
+
+button.card_container {
+  min-width: 250px;
+  max-width: 250px;
+  aspect-ratio: 1/1.35;
+  display: inline-block;
+  background: linear-gradient(to right bottom, $gray1, darken($gray1, 45%));
+  transform: scale(0.9);
+  transition: all 0.5s;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #f14964;
+
+  display: flex;
+  align-items: flex-end;
+  cursor: pointer;
+
+  @include customMedia(false, 1024px) {
+    min-width: 180px;
+  }
+  @include customMedia(false, 768px) {
+    min-width: 140px;
+  }
+  @include customMedia(false, 425px) {
+    min-width: 110px;
+  }
+  @include customMedia(false, 365px) {
+    min-width: 90px;
+  }
+
+  &:hover {
+    transform: scale(1);
+    .wrapper_box {
+      opacity: 1;
+      transition-delay: 0.3s;
+    }
+  }
+}
+.image_box {
+  height: 100%;
+  img {
+    width: 100%;
+  }
+}
+.wrapper_box {
+  opacity: 0;
+  position: absolute;
+  transition: all 0.5s;
+  background-color: rgb(21, 21, 21);
+  user-select: none;
+  width: 100%;
+}
+.title_box {
+  .cardTitle {
+    padding: 8px;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+}
+.description_box {
+  display: flex;
+  padding: 4px 0 8px;
+  background-color: rgb(35, 35, 35);
+  min-height: 120px;
+}
+.left {
+  flex: 80%;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  .description {
+    font-size: 1.6rem;
+    padding-left: 12px;
+  }
+}
+.right {
+  flex: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .playBtn {
+    font-size: 4rem;
+    color: $text-color;
+  }
+}
