@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Modal } from '../components/Modal';
+import { Modal2 } from '../components/Modal2';
 import { FaReact, FaSass, FaUserTie, FaDatabase } from 'react-icons/fa';
 import { SiNodeDotJs, SiHtml5, SiFirebase, SiTypescript, SiJavascript } from 'react-icons/si';
 import { IoSchoolSharp } from 'react-icons/io5';
@@ -10,7 +11,6 @@ import styles from '../styles/home.module.scss';
 import casaImg from '../assets/images/casa-mobile.png';
 import casaImg2 from '../assets/images/casa-responsive.png';
 import { ProjectCard } from '../components/ProjectCard';
-import { BackgroundSVG } from '../components/BackgroundSVG';
 
 const skills = [
     {
@@ -60,6 +60,14 @@ const skills = [
     },
 ]
 
+const jobs = [
+    {
+        id: 1,
+        sname: 'javascript',
+        sicon: <SiJavascript />
+    },
+]
+
 export function Home() {
     const [showSkillsModal, setShowSkillsModal] = useState(false);
     const [showJobsModal, setShowJobsModal] = useState(false);
@@ -94,6 +102,19 @@ export function Home() {
                             })}
                         </div>
                     </Modal>
+                    <Modal2 onClose={() => setShowJobsModal(false)} show={showJobsModal}>
+                        <div className={styles.boxContentTwo}>
+                            <span className={styles.div2title}>skills</span>
+                            {jobs.map((jobs: any) => {
+                                return (
+                                    <div className={styles.listContentTwo}>
+                                        <span className={styles.listContentTwoSkill}>{jobs.sname}</span>
+                                        <span className={styles.listContentTwoSkillIcon}>{jobs.sicon}</span>
+                                    </div>
+                                )
+                            })}
+                        </div>
+                    </Modal2>
                 </div>
                 <div className={styles.div2}>
                 </div>
@@ -130,6 +151,8 @@ export function Home() {
                     />
                 </div>
             </div>
+
+
         </div>
     );
 }
